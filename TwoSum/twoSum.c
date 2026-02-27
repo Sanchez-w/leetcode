@@ -25,11 +25,10 @@ int main() {
         nums[i - 1] = i;
     }
     int target = 19999;
-    int* output = NULL;
     // 不要访问一块没有初始化的内存
     // int* outputSize = NULL;
     int* outputSize = (int*)malloc(sizeof(int));
-    output = twoSum(nums, numsSize, target, outputSize);
+    int* output = twoSum(nums, numsSize, target, outputSize);
     for (uint8_t i = 0; i < *outputSize; i++) {
         printf("%d\n", output[i]);
     }
